@@ -105,12 +105,6 @@ This calculator is built with modern web standards and follows best practices fo
 - 性能优化
 - 跨浏览器兼容性
 
-## License / 许可证
-
-MIT License - feel free to use this project for personal or commercial purposes.
-
-MIT许可证 - 可自由用于个人或商业目的。
-
 ## Contributing / 贡献指南
 
 Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
