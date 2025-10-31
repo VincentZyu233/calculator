@@ -1,0 +1,65 @@
+/* Dark theme styles */
+[data-theme="dark"] {
+    --background-color: #1a1a1a;
+    --card-bg: #2d2d2d;
+    --text-color: #ffffff;
+    --border-color: #404040;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .display {
+    background: #1a1a1a;
+}
+
+[data-theme="dark"] .num-btn {
+    background: #404040;
+    color: #ffffff;
+    border-color: #555;
+}
+
+[data-theme="dark"] .num-btn:hover {
+    background: #555;
+    border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .sci-btn {
+    background: #2a2a2a;
+    color: var(--primary-color);
+    border-color: #404040;
+}
+
+[data-theme="dark"] .sci-btn:hover {
+    background: #404040;
+    border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .control-btn {
+    background: #3e2723;
+    color: #ff9800;
+    border-color: #5d4037;
+}
+
+[data-theme="dark"] .control-btn:hover {
+    background: #5d4037;
+    border-color: #ff9800;
+}
+
+[data-theme="dark"] .memory-btn {
+    background: #1b5e20;
+    color: #81c784;
+    border-color: #2e7d32;
+}
+
+[data-theme="dark"] .memory-btn:hover {
+    background: #2e7d32;
+    border-color: #81c784;
+}
+
+/* Theme transition */
+.calculator {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn {
+    transition: all 0.3s ease;
+}

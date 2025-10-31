@@ -1,0 +1,124 @@
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .calculator-container {
+        max-width: 100%;
+    }
+    
+    .calculator-header h1 {
+        font-size: 1.3rem;
+    }
+    
+    .display {
+        padding: 15px;
+        min-height: 100px;
+    }
+    
+    .result {
+        font-size: 2rem;
+    }
+    
+    .expression {
+        font-size: 0.9rem;
+    }
+    
+    .controls,
+    .buttons-grid,
+    .memory-controls {
+        gap: 6px;
+        padding: 10px;
+    }
+    
+    .btn {
+        height: 50px;
+        font-size: 1rem;
+        border-radius: 10px;
+    }
+    
+    .sci-btn {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .calculator-header {
+        padding: 15px;
+    }
+    
+    .calculator-header h1 {
+        font-size: 1.1rem;
+    }
+    
+    .display {
+        padding: 12px;
+        min-height: 90px;
+    }
+    
+    .result {
+        font-size: 1.8rem;
+    }
+    
+    .btn {
+        height: 45px;
+        font-size: 0.9rem;
+    }
+    
+    .sci-btn {
+        font-size: 0.75rem;
+    }
+    
+    .buttons-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* Hide some scientific buttons on very small screens */
+    .buttons-grid .sci-btn:nth-child(5),
+    .buttons-grid .sci-btn:nth-child(10) {
+        display: none;
+    }
+}
+
+/* Landscape mode optimization */
+@media (max-height: 600px) and (orientation: landscape) {
+    body {
+        padding: 5px;
+    }
+    
+    .calculator-container {
+        max-width: 90%;
+    }
+    
+    .calculator {
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    
+    .btn {
+        height: 40px;
+        font-size: 0.9rem;
+    }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .calculator {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* Print styles */
+@media print {
+    .calculator {
+        box-shadow: none;
+        border: 2px solid #000;
+    }
+    
+    .theme-btn,
+    .memory-controls {
+        display: none;
+    }
+}

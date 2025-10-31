@@ -1,0 +1,213 @@
+/* Main styles for the calculator */
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #7b68ee;
+    --accent-color: #ff6b6b;
+    --background-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-color: #2c3e50;
+    --border-color: #e1e5e9;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.calculator-container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.calculator {
+    background: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.calculator-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+.calculator-header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.theme-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(15deg);
+}
+
+.display {
+    padding: 20px;
+    background: var(--background-color);
+    border-bottom: 1px solid var(--border-color);
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.memory-indicator {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    min-height: 16px;
+}
+
+.expression {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+    min-height: 20px;
+    word-break: break-all;
+    text-align: right;
+    width: 100%;
+}
+
+.result {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--text-color);
+    word-break: break-all;
+    text-align: right;
+    width: 100%;
+    line-height: 1.2;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.memory-controls {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 15px;
+    border-top: 1px solid var(--border-color);
+}
+
+.btn {
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    height: 60px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.num-btn {
+    background: var(--background-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.num-btn:hover {
+    background: #e9ecef;
+    border-color: var(--primary-color);
+}
+
+.op-btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+.op-btn:hover {
+    background: linear-gradient(135deg, #3a80d2, #6a58d8);
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+}
+
+.sci-btn {
+    background: #e3f2fd;
+    color: var(--primary-color);
+    border: 1px solid #bbdefb;
+    font-size: 0.9rem;
+}
+
+.sci-btn:hover {
+    background: #bbdefb;
+    border-color: var(--primary-color);
+}
+
+.control-btn {
+    background: #fff3e0;
+    color: #f57c00;
+    border: 1px solid #ffe0b2;
+}
+
+.control-btn:hover {
+    background: #ffe0b2;
+    border-color: #f57c00;
+}
+
+.memory-btn {
+    background: #e8f5e8;
+    color: #388e3c;
+    border: 1px solid #c8e6c9;
+    font-size: 0.9rem;
+}
+
+.memory-btn:hover {
+    background: #c8e6c9;
+    border-color: #388e3c;
+}
+
+.equals {
+    grid-column: span 2;
+}
