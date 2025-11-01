@@ -63,21 +63,30 @@
     
     .btn {
         height: 45px;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+        border-radius: 8px;
     }
     
     .sci-btn {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
+        padding: 2px;
     }
     
+    /* 保持5列布局，避免混乱 */
     .buttons-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+        gap: 5px;
+        padding: 8px;
     }
     
-    /* Hide some scientific buttons on very small screens */
-    .buttons-grid .sci-btn:nth-child(5),
-    .buttons-grid .sci-btn:nth-child(10) {
-        display: none;
+    .controls {
+        gap: 5px;
+        padding: 8px;
+    }
+    
+    .memory-controls {
+        gap: 5px;
+        padding: 8px;
     }
 }
 
